@@ -2,7 +2,7 @@ import { InmemoryUserService } from '@/services/in-memory/in-memory-users-servic
 import { GetUserProfileUseCase } from './get-user-profile'
 import { describe, expect, it, beforeEach } from 'vitest'
 import { hash } from 'bcrypt'
-import { ResourceNotFoundError } from './factories/resource-not-found-error'
+import { ResourceNotFoundError } from './errors/resource-not-found-error'
 
 let usersService: InmemoryUserService
 let sut: GetUserProfileUseCase
