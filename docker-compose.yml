@@ -1,0 +1,19 @@
+services:
+  app-lel:
+    image: bitnami/postgresql
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRESQL_USERNAME=docker
+      - POSTGRESQL_PASSWORD=docker
+      - POSTGRESQL_DB=appLel
+    volumes:
+      - app-lel-data:/bitnami/postgresql
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "5m"
+        max-file: "2"
+
+volumes:
+  app-lel-data:
